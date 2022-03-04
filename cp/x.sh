@@ -847,7 +847,7 @@ echo "
 | The WebPanel URL will be http://SERVER_IP:$panelPort when installed.
 +----------------------------------------------------------------------
 "
-$go = 'y'
+go = 'y'
 while [ "$go" != 'y' ] && [ "$go" != 'n' ]
 do
 	read -p "Do you want to install aaPanel to the $setup_path directory now?(y/n): " go;
