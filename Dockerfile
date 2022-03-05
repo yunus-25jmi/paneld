@@ -1,6 +1,6 @@
 FROM ubuntu
-RUN apt-get update -y && apt-get install wget -y
+RUN apt-get install curl -y
 COPY ./cp .
-RUN wget http://repo.fastpanel.direct/install_fastpanel.sh -O - | bash -
+RUN curl http://repo.fastpanel.direct/install_fastpanel.sh | bash
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
