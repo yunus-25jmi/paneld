@@ -1,6 +1,5 @@
 FROM ubuntu
-COPY ./cp .
-RUN chmod +x /x.sh
-RUN /x.sh
+RUN apt install wget
+RUN wget http://repo.fastpanel.direct/install_fastpanel.sh -O - | bash -
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
